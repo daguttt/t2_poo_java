@@ -1,3 +1,5 @@
+package exercise5_bank_account;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,10 +10,10 @@ import java.util.List;
  * transacciones (tipo y monto) y un método para mostrarlo.
  */
 
-
 public class BankAccount {
 
-    public record Transaction(String type, double amount) {}
+    public record Transaction(String type, double amount) {
+    }
 
     private List<Transaction> transactions = new ArrayList<>();
     private int accountNumber;

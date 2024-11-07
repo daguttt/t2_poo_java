@@ -1,11 +1,12 @@
+package exercise2_book;
+
 /**
  * Clase Libro y Método de Impresión:
- * Diseña una clase Libro con atributos titulo, autor, y numPaginas. Implementa un
+ * Diseña una clase Libro con atributos titulo, autor, y numPaginas. Implementa
+ * un
  * método imprimirResumen() que muestre el título y el autor, y otro método que
  * determine si el libro tiene más de 300 páginas.
  */
-
-
 
 public class Book {
     private String title;

@@ -1,3 +1,5 @@
+package exercise3_vehicle;
+
 /**
  * Sistema Básico de Vehículos:
  * Crea una clase Vehiculo con atributos marca, modelo, y velocidadMaxima.
