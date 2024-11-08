@@ -12,6 +12,7 @@ import exercise8_products_inventory.Inventory;
 import exercise8_products_inventory.Product;
 import exercise9_library.Book;
 import exercise9_library.Library;
+import exercise10_employee.Employee;
 
 public class Main {
     public static void main(String[] args) {
@@ -96,39 +97,54 @@ public class Main {
         // System.out.println();
         // System.out.println("Total value of inventory: " + totalValue);
 
-        // Exercise 9: Sistema de Biblioteca
-        Library library = new Library();
+//        // Exercise 9: Sistema de Biblioteca
+//        Library library = new Library();
+//
+//        library.addBook(new Book("Don Quijote", "Miguel de Cervantes"));
+//        library.addBook(new Book("Cien años de soledad", "Gabriel García Márquez"));
+//
+//        boolean lentBook = library.lendBook("Don Quijote");
+//        if (lentBook)
+//            System.out.println("Libro prestado con éxito");
+//        else
+//            System.out.println("No se pudo prestar el libro");
+//
+//        library.printAvailableBooks();
+//
+//        boolean returnedBook = library.returnBook("Don Quijote");
+//        if (returnedBook)
+//            System.out.println("Libro devuelto con éxito");
+//        else
+//            System.out.println("No se pudo devolver el libro");
+//
+//        // Exercise 16: Inventory Management
+//        Inventory inventory = new Inventory();
+//
+//        inventory.addProduct(new Product("Laptop", 999.99, "Electronics", 10));
+//        inventory.addProduct(new Product("Smartphone", 599.99, "Electronics", 15));
+//        inventory.addProduct(new Product("Book", 19.99, "Books", 50));
+//
+//        inventory.sellProduct("Laptop", 2);
+//        inventory.findByName("Laptop")
+//                .ifPresent(product -> System.out.println("Laptop stock after selling 2: " + product.getStock()));
+//
+//        boolean isProductRemoved = inventory.deleteProduct("Book");
+//        System.out.println("Book was " + (isProductRemoved ? "successfully removed" : "not found"));
 
-        library.addBook(new Book("Don Quijote", "Miguel de Cervantes"));
-        library.addBook(new Book("Cien años de soledad", "Gabriel García Márquez"));
+        // Create an example employee
+        Employee daniel = new Employee("Daniel Rodriguez", 30000.0, 5);
 
-        boolean lentBook = library.lendBook("Don Quijote");
-        if (lentBook)
-            System.out.println("Libro prestado con éxito");
-        else
-            System.out.println("No se pudo prestar el libro");
+        // Show employee information
+        System.out.println("Información del empleado :");
+        System.out.println(daniel);
 
-        library.printAvailableBooks();
-
-        boolean returnedBook = library.returnBook("Don Quijote");
-        if (returnedBook)
-            System.out.println("Libro devuelto con éxito");
-        else
-            System.out.println("No se pudo devolver el libro");
-
-        // Exercise 16: Inventory Management
-        Inventory inventory = new Inventory();
-
-        inventory.addProduct(new Product("Laptop", 999.99, "Electronics", 10));
-        inventory.addProduct(new Product("Smartphone", 599.99, "Electronics", 15));
-        inventory.addProduct(new Product("Book", 19.99, "Books", 50));
-
-        inventory.sellProduct("Laptop", 2);
-        inventory.findByName("Laptop")
-                .ifPresent(product -> System.out.println("Laptop stock after selling 2: " + product.getStock()));
-
-        boolean isProductRemoved = inventory.deleteProduct("Book");
-        System.out.println("Book was " + (isProductRemoved ? "successfully removed" : "not found"));
-
+        // Show specific calculations
+        System.out.printf("""
+                Detalles del bono:
+                
+                Salerio base: $%,.2f
+                Bono anual: $%,.2f
+                Salerio total con bono: $%,.2f
+                """, daniel.getBaseSalary(), daniel.calculateAnnualBonus(), daniel.getTotalSalaryWithBonus());
     }
 }
