@@ -10,6 +10,8 @@
 
 import exercise11_vehicles_inheritance.Car;
 import exercise11_vehicles_inheritance.Motorcycle;
+import exercise12_inheritance_videogame.Warrior;
+import exercise12_inheritance_videogame.Wizard;
 
 public class Main {
     public static void main(String[] args) {
@@ -113,7 +115,7 @@ public class Main {
 //            System.out.println("Libro devuelto con éxito");
 //        else
 //            System.out.println("No se pudo devolver el libro");
-//
+
 //        // Exercise 10: Gestión bonos de empleados
 //        Employee daniel = new Employee("Daniel Rodriguez", 30000.0, 5);
 //
@@ -128,15 +130,20 @@ public class Main {
 //                Salerio total con bono: $%,.2f
 //                """, daniel.getBaseSalary(), daniel.calculateAnnualBonus(), daniel.getTotalSalaryWithBonus());
 
-        // Exercise 11: Gestión de vehículos
-         Car car = new Car("Ford", "Mustang", 150);
-         car.printCharacteristics();
+//        // Exercise 11: Gestión de vehículos
+//         Car car = new Car("Ford", "Mustang", 150);
+//         car.printCharacteristics();
+//
+//        Motorcycle motorcycle = new Motorcycle("Harley-Davidson", "Sportster", 209, Motorcycle.HelmetType.INTEGRAL);
+//        motorcycle.printCharacteristics();
 
-        Motorcycle motorcycle = new Motorcycle("Harley-Davidson", "Sportster", 209, Motorcycle.HelmetType.INTEGRAL);
-        motorcycle.printCharacteristics();
+        // Exercise 12: Video game
+        Warrior warrior = new Warrior("Gimli", 100);
 
+        Wizard wizard = new Wizard("Merlin", 100);
+        wizard.attack(warrior);
 
-
+        warrior.attack(wizard);
 
 //        // Exercise 16: Inventory Management
 //        Inventory inventory = new Inventory();
