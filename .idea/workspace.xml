@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b75d691d-06e9-41f1-96e4-ea41a94dcb96" name="Changes" comment="feat: solve exercise 11">
-      <change afterPath="$PROJECT_DIR$/src/exercise12_inheritance_videogame/Character.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exercise12_inheritance_videogame/Warrior.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exercise12_inheritance_videogame/Wizard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b75d691d-06e9-41f1-96e4-ea41a94dcb96" name="Changes" comment="fix: fix typo in exercise 10">
+      <change afterPath="$PROJECT_DIR$/src/exercise13_zoo/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exercise13_zoo/Cat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exercise13_zoo/Dog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,13 +85,31 @@
       <option name="project" value="LOCAL" />
       <updated>1731096031271</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: solve exercise 12">
+      <option name="closed" value="true" />
+      <created>1731096829090</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731096829090</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fix: fix typo in exercise 10">
+      <option name="closed" value="true" />
+      <created>1731096889612</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731096889612</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="chore: initial commit" />
     <MESSAGE value="feat: solve exercise 10" />
     <MESSAGE value="feat: solve exercise 11" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: solve exercise 11" />
+    <MESSAGE value="feat: solve exercise 12" />
+    <MESSAGE value="fix: fix typo in exercise 10" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: fix typo in exercise 10" />
   </component>
 </project>

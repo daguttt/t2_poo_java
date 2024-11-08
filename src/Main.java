@@ -12,6 +12,9 @@ import exercise11_vehicles_inheritance.Car;
 import exercise11_vehicles_inheritance.Motorcycle;
 import exercise12_inheritance_videogame.Warrior;
 import exercise12_inheritance_videogame.Wizard;
+import exercise13_zoo.Bird;
+import exercise13_zoo.Cat;
+import exercise13_zoo.Dog;
 
 public class Main {
     public static void main(String[] args) {
@@ -137,13 +140,24 @@ public class Main {
 //        Motorcycle motorcycle = new Motorcycle("Harley-Davidson", "Sportster", 209, Motorcycle.HelmetType.INTEGRAL);
 //        motorcycle.printCharacteristics();
 
-        // Exercise 12: Video game
-        Warrior warrior = new Warrior("Gimli", 100);
+//        // Exercise 12: Video game
+//        Warrior warrior = new Warrior("Gimli", 100);
+//
+//        Wizard wizard = new Wizard("Merlin", 100);
+//        wizard.attack(warrior);
+//
+//        warrior.attack(wizard);
 
-        Wizard wizard = new Wizard("Merlin", 100);
-        wizard.attack(warrior);
+        // Exercise 13: Zoo
+        Dog dog = new Dog("Rex");
+        dog.makeNoise();
 
-        warrior.attack(wizard);
+        Cat cat = new Cat("Garfield");
+        cat.makeNoise();
+
+        Bird bird = new Bird("Parrot");
+        bird.makeNoise();
+
 
 //        // Exercise 16: Inventory Management
 //        Inventory inventory = new Inventory();
