@@ -8,10 +8,10 @@ package exercise3_vehicle;
  */
 
 public class Vehicle {
-    private String brand;
-    private String model;
-    private int currentSpeed;
-    private int maxSpeed;
+    protected String brand;
+    protected String model;
+    protected int currentSpeed;
+    protected int maxSpeed;
 
     public Vehicle(String brand, String model, int maxSpeed) {
         this.brand = brand;

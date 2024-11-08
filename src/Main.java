@@ -8,11 +8,8 @@
 // import exercise8_products_inventory.Inventory;
 // import exercise8_products_inventory.Product;
 
-import exercise8_products_inventory.Inventory;
-import exercise8_products_inventory.Product;
-import exercise9_library.Book;
-import exercise9_library.Library;
-import exercise10_employee.Employee;
+import exercise11_vehicles_inheritance.Car;
+import exercise11_vehicles_inheritance.Motorcycle;
 
 public class Main {
     public static void main(String[] args) {
@@ -117,6 +114,30 @@ public class Main {
 //        else
 //            System.out.println("No se pudo devolver el libro");
 //
+//        // Exercise 10: Gestión bonos de empleados
+//        Employee daniel = new Employee("Daniel Rodriguez", 30000.0, 5);
+//
+//        System.out.println("Información del empleado :");
+//        System.out.println(daniel);
+//
+//        System.out.printf("""
+//                Detalles del bono:
+//
+//                Salerio base: $%,.2f
+//                Bono anual: $%,.2f
+//                Salerio total con bono: $%,.2f
+//                """, daniel.getBaseSalary(), daniel.calculateAnnualBonus(), daniel.getTotalSalaryWithBonus());
+
+        // Exercise 11: Gestión de vehículos
+         Car car = new Car("Ford", "Mustang", 150);
+         car.printCharacteristics();
+
+        Motorcycle motorcycle = new Motorcycle("Harley-Davidson", "Sportster", 209, Motorcycle.HelmetType.INTEGRAL);
+        motorcycle.printCharacteristics();
+
+
+
+
 //        // Exercise 16: Inventory Management
 //        Inventory inventory = new Inventory();
 //
@@ -131,20 +152,5 @@ public class Main {
 //        boolean isProductRemoved = inventory.deleteProduct("Book");
 //        System.out.println("Book was " + (isProductRemoved ? "successfully removed" : "not found"));
 
-        // Create an example employee
-        Employee daniel = new Employee("Daniel Rodriguez", 30000.0, 5);
-
-        // Show employee information
-        System.out.println("Información del empleado :");
-        System.out.println(daniel);
-
-        // Show specific calculations
-        System.out.printf("""
-                Detalles del bono:
-                
-                Salerio base: $%,.2f
-                Bono anual: $%,.2f
-                Salerio total con bono: $%,.2f
-                """, daniel.getBaseSalary(), daniel.calculateAnnualBonus(), daniel.getTotalSalaryWithBonus());
     }
 }
