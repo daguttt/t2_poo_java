@@ -8,13 +8,9 @@
 // import exercise8_products_inventory.Inventory;
 // import exercise8_products_inventory.Product;
 
-import exercise11_vehicles_inheritance.Car;
-import exercise11_vehicles_inheritance.Motorcycle;
-import exercise12_inheritance_videogame.Warrior;
-import exercise12_inheritance_videogame.Wizard;
-import exercise13_zoo.Bird;
-import exercise13_zoo.Cat;
-import exercise13_zoo.Dog;
+import exercise14_payments.CardPayment;
+import exercise14_payments.CashPayment;
+import exercise14_payments.Payment;
 
 public class Main {
     public static void main(String[] args) {
@@ -148,16 +144,22 @@ public class Main {
 //
 //        warrior.attack(wizard);
 
-        // Exercise 13: Zoo
-        Dog dog = new Dog("Rex");
-        dog.makeNoise();
+//        // Exercise 13: Zoo
+//        Dog dog = new Dog("Rex");
+//        dog.makeNoise();
+//
+//        Cat cat = new Cat("Garfield");
+//        cat.makeNoise();
+//
+//        Bird bird = new Bird("Parrot");
+//        bird.makeNoise();
 
-        Cat cat = new Cat("Garfield");
-        cat.makeNoise();
+        // Exercise 14: Payments
+        Payment cardPayment = new CardPayment();
+        cardPayment.pay(3_425d);
 
-        Bird bird = new Bird("Parrot");
-        bird.makeNoise();
-
+        Payment cashPayment = new CashPayment();
+        cashPayment.pay(2_332d);
 
 //        // Exercise 16: Inventory Management
 //        Inventory inventory = new Inventory();
