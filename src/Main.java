@@ -125,9 +125,9 @@ public class Main {
 //        System.out.printf("""
 //                Detalles del bono:
 //
-//                Salerio base: $%,.2f
+//                Salario base: $%,.2f
 //                Bono anual: $%,.2f
-//                Salerio total con bono: $%,.2f
+//                Salario total con bono: $%,.2f
 //                """, daniel.getBaseSalary(), daniel.calculateAnnualBonus(), daniel.getTotalSalaryWithBonus());
 
 //        // Exercise 11: Gestión de vehículos
