@@ -5,11 +5,11 @@
 // import exercise5_bank_account.BankAccount;
 // import exercise6_contacts_manager.Contact;
 // import exercise6_contacts_manager.ContactsManager;
+// import exercise8_products_inventory.Inventory;
+// import exercise8_products_inventory.Product;
 
-import java.util.List;
-
-import exercise8_products_inventory.Inventory;
-import exercise8_products_inventory.Product;
+import exercise9_library.Book;
+import exercise9_library.Library;
 
 public class Main {
     public static void main(String[] args) {
@@ -74,25 +74,44 @@ public class Main {
         // System.out.printf("Student average: %.2f\n", student.calculateAverage());
         // System.out.printf("Student approved: %s\n", student.approved());
 
-        // Exercise 8: Gestión de inventario de productos
-        Inventory inventory = new Inventory();
+        // // Exercise 8: Gestión de inventario de productos
+        // Inventory inventory = new Inventory();
 
-        inventory.addProduct(new Product("Laptop", 999.99, "Electronics"));
-        inventory.addProduct(new Product("Smartphone", 599.99, "Electronics"));
-        inventory.addProduct(new Product("Book", 19.99, "Books"));
+        // inventory.addProduct(new Product("Laptop", 999.99, "Electronics"));
+        // inventory.addProduct(new Product("Smartphone", 599.99, "Electronics"));
+        // inventory.addProduct(new Product("Book", 19.99, "Books"));
 
-        List<Product> electronicProducts = inventory.findByCategory("Electronics");
-        System.out.printf("""
+        // List<Product> electronicProducts = inventory.findByCategory("Electronics");
+        // System.out.printf("""
 
-                Products in Electronics category:
+        // Products in Electronics category:
 
-                %s
-                """, String.join("\n",
-                electronicProducts.stream().map(Product::toString).toList()));
+        // %s
+        // """, String.join("\n",
+        // electronicProducts.stream().map(Product::toString).toList()));
 
-        double totalValue = inventory.calculateTotalValue();
-        System.out.println();
-        System.out.println("Total value of inventory: " + totalValue);
+        // double totalValue = inventory.calculateTotalValue();
+        // System.out.println();
+        // System.out.println("Total value of inventory: " + totalValue);
 
+        // Exercise 9: Sistema de Biblioteca
+        Library library = new Library();
+
+        library.addBook(new Book("Don Quijote", "Miguel de Cervantes"));
+        library.addBook(new Book("Cien años de soledad", "Gabriel García Márquez"));
+
+        boolean lentBook = library.lendBook("Don Quijote");
+        if (lentBook)
+            System.out.println("Libro prestado con éxito");
+        else
+            System.out.println("No se pudo prestar el libro");
+
+        library.printAvailableBooks();
+
+        boolean returnedBook = library.returnBook("Don Quijote");
+        if (returnedBook)
+            System.out.println("Libro devuelto con éxito");
+        else
+            System.out.println("No se pudo devolver el libro");
     }
 }
