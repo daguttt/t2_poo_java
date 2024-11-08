@@ -1,10 +1,15 @@
-import exercise1_product.Product;
-import exercise2_book.Book;
-import exercise3_vehicle.Vehicle;
-import exercise4_person.Person;
-import exercise5_bank_account.BankAccount;
-import exercise6_contacts_manager.Contact;
-import exercise6_contacts_manager.ContactsManager;
+// import exercise1_product.Product;
+// import exercise2_book.Book;
+// import exercise3_vehicle.Vehicle;
+// import exercise4_person.Person;
+// import exercise5_bank_account.BankAccount;
+// import exercise6_contacts_manager.Contact;
+// import exercise6_contacts_manager.ContactsManager;
+
+import java.util.List;
+
+import exercise8_products_inventory.Inventory;
+import exercise8_products_inventory.Product;
 
 public class Main {
     public static void main(String[] args) {
@@ -56,20 +61,38 @@ public class Main {
         // }
         // contactsManager.printContacts();
 
-        // Exercise 7: Gestión de notas de estudiantes
-        Student student = new Student("John Doe");
-        student.addGrade(85.0);
-        student.addGrade(90.0);
-        student.addGrade(78.5);
-        student.addGrade(32.0);
-        student.addGrade(48.5);
-        student.addGrade(25.0);
-        student.addGrade(100.0);
-        System.out.printf("Student name: %s\n", student.getName());
-        System.out.printf("Student average: %.2f\n", student.calculateAverage());
-        System.out.printf("Student approved: %s\n", student.approved());
+        // // Exercise 7: Gestión de notas de estudiantes
+        // Student student = new Student("John Doe");
+        // student.addGrade(85.0);
+        // student.addGrade(90.0);
+        // student.addGrade(78.5);
+        // student.addGrade(32.0);
+        // student.addGrade(48.5);
+        // student.addGrade(25.0);
+        // student.addGrade(100.0);
+        // System.out.printf("Student name: %s\n", student.getName());
+        // System.out.printf("Student average: %.2f\n", student.calculateAverage());
+        // System.out.printf("Student approved: %s\n", student.approved());
 
-        // Exercise 8:
+        // Exercise 8: Gestión de inventario de productos
+        Inventory inventory = new Inventory();
+
+        inventory.addProduct(new Product("Laptop", 999.99, "Electronics"));
+        inventory.addProduct(new Product("Smartphone", 599.99, "Electronics"));
+        inventory.addProduct(new Product("Book", 19.99, "Books"));
+
+        List<Product> electronicProducts = inventory.findByCategory("Electronics");
+        System.out.printf("""
+
+                Products in Electronics category:
+
+                %s
+                """, String.join("\n",
+                electronicProducts.stream().map(Product::toString).toList()));
+
+        double totalValue = inventory.calculateTotalValue();
+        System.out.println();
+        System.out.println("Total value of inventory: " + totalValue);
 
     }
 }
