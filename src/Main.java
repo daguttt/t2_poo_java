@@ -8,6 +8,8 @@
 // import exercise8_products_inventory.Inventory;
 // import exercise8_products_inventory.Product;
 
+import exercise8_products_inventory.Inventory;
+import exercise8_products_inventory.Product;
 import exercise9_library.Book;
 import exercise9_library.Library;
 
@@ -113,5 +115,20 @@ public class Main {
             System.out.println("Libro devuelto con éxito");
         else
             System.out.println("No se pudo devolver el libro");
+
+        // Exercise 16: Inventory Management
+        Inventory inventory = new Inventory();
+
+        inventory.addProduct(new Product("Laptop", 999.99, "Electronics", 10));
+        inventory.addProduct(new Product("Smartphone", 599.99, "Electronics", 15));
+        inventory.addProduct(new Product("Book", 19.99, "Books", 50));
+
+        inventory.sellProduct("Laptop", 2);
+        inventory.findByName("Laptop")
+                .ifPresent(product -> System.out.println("Laptop stock after selling 2: " + product.getStock()));
+
+        boolean isProductRemoved = inventory.deleteProduct("Book");
+        System.out.println("Book was " + (isProductRemoved ? "successfully removed" : "not found"));
+
     }
 }

@@ -2,6 +2,7 @@ package exercise8_products_inventory;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class Inventory {
@@ -31,10 +32,20 @@ public class Inventory {
         .sum();
   }
 
-  public Product findByName(String name) {
+  public Optional<Product> findByName(String name) {
     return products.stream()
         .filter(product -> product.getName().equalsIgnoreCase(name))
-        .findFirst()
-        .orElse(null);
+        .findFirst();
+  }
+
+  public boolean deleteProduct(String name) {
+    return products.removeIf(product -> product.getName().equalsIgnoreCase(name));
+  }
+
+  public void sellProduct(String name, int quantity) {
+    Optional<Product> product = findByName(name);
+    if (product.isPresent() && product.get().getStock() >= quantity) {
+      product.get().setStock(product.get().getStock() - quantity);
+    }
   }
 }
