@@ -11,8 +11,13 @@
 //import exercise14_payments.CashPayment;
 //import exercise14_payments.Payment;
 
-import exercise15_vehicles_maintenance.Fleet;
-import exercise3_vehicle.Vehicle;
+//import exercise15_vehicles_maintenance.Fleet;
+//import exercise3_vehicle.Vehicle;
+import exercise17_sales_registry.Customer;
+import exercise17_sales_registry.Product;
+import exercise17_sales_registry.Store;
+
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -163,14 +168,14 @@ public class Main {
 //        Payment cashPayment = new CashPayment();
 //        cashPayment.pay(2_332d);
 
-        // Exercise 15: Cars Maintenance
-        Fleet fleet = new Fleet();
-        fleet.addVehicle(new Vehicle("Toyota", "Corolla", 15000));
-        fleet.addVehicle(new Vehicle("Ford", "Focus", 25000));
-        fleet.addVehicle(new Vehicle("Honda", "Civic", 5000));
-
-        int mileageLimit = 10000;
-        fleet.registerMaintenance(mileageLimit);
+//        // Exercise 15: Cars Maintenance
+//        Fleet fleet = new Fleet();
+//        fleet.addVehicle(new Vehicle("Toyota", "Corolla", 15000));
+//        fleet.addVehicle(new Vehicle("Ford", "Focus", 25000));
+//        fleet.addVehicle(new Vehicle("Honda", "Civic", 5000));
+//
+//        int mileageLimit = 10000;
+//        fleet.registerMaintenance(mileageLimit);
 
 //        // Exercise 16: Inventory Management
 //        Inventory inventory = new Inventory();
@@ -186,5 +191,21 @@ public class Main {
 //        boolean isProductRemoved = inventory.deleteProduct("Book");
 //        System.out.println("Book was " + (isProductRemoved ? "successfully removed" : "not found"));
 
+        // Exercise 17: Sales Registry
+        Store store = new Store();
+
+        // Adding products to store inventory
+        Product p1 = new Product("Laptop", 999.99, 5);
+        Product p2 = new Product("Phone", 499.99, 10);
+        Product p3 = new Product("Tablet", 299.99, 8);
+
+        store.addProductToInventory(p1);
+        store.addProductToInventory(p2);
+        store.addProductToInventory(p3);
+
+        Customer customer = new Customer("Alice", "alice@example.com");
+        List<Product> orderProducts = List.of(p1, p2);
+
+        store.processOrder(customer, orderProducts);
     }
 }

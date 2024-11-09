@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b75d691d-06e9-41f1-96e4-ea41a94dcb96" name="Changes" comment="feat: solve exercise 14">
-      <change afterPath="$PROJECT_DIR$/src/exercise15_vehicles_maintenance/Fleet.java" afterDir="false" />
+    <list default="true" id="b75d691d-06e9-41f1-96e4-ea41a94dcb96" name="Changes" comment="feat: solve exercise 15">
+      <change afterPath="$PROJECT_DIR$/src/exercise17_sales_registry/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exercise17_sales_registry/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exercise17_sales_registry/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exercise17_sales_registry/Store.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exercise3_vehicle/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exercise3_vehicle/Vehicle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731097840326</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: solve exercise 15">
+      <option name="closed" value="true" />
+      <created>1731113210040</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1731113210040</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -142,6 +152,7 @@
     <MESSAGE value="fix: fix typo in exercise 10" />
     <MESSAGE value="feat: solve exericse 13" />
     <MESSAGE value="feat: solve exercise 14" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: solve exercise 14" />
+    <MESSAGE value="feat: solve exercise 15" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: solve exercise 15" />
   </component>
 </project>
