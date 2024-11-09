@@ -12,6 +12,7 @@ public class Vehicle {
     protected String model;
     protected int currentSpeed;
     protected int maxSpeed;
+    protected int mileage;
 
     public Vehicle(String brand, String model, int maxSpeed) {
         this.brand = brand;
@@ -21,6 +22,10 @@ public class Vehicle {
 
     public int getCurrentSpeed() {
         return currentSpeed;
+    }
+
+    public int getMileage() {
+        return mileage;
     }
 
     public void accelerate() {
@@ -35,5 +40,9 @@ public class Vehicle {
         if (canBrake) {
             this.currentSpeed -= 10;
         }
+    }
+
+    public void performMaintenance() {
+        System.out.printf("Performing maintenance on the vehicle %s %s with %d miles.%n", brand, model, mileage);
     }
 }

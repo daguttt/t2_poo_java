@@ -7,10 +7,12 @@
 // import exercise6_contacts_manager.ContactsManager;
 // import exercise8_products_inventory.Inventory;
 // import exercise8_products_inventory.Product;
+//import exercise14_payments.CardPayment;
+//import exercise14_payments.CashPayment;
+//import exercise14_payments.Payment;
 
-import exercise14_payments.CardPayment;
-import exercise14_payments.CashPayment;
-import exercise14_payments.Payment;
+import exercise15_vehicles_maintenance.Fleet;
+import exercise3_vehicle.Vehicle;
 
 public class Main {
     public static void main(String[] args) {
@@ -154,12 +156,21 @@ public class Main {
 //        Bird bird = new Bird("Parrot");
 //        bird.makeNoise();
 
-        // Exercise 14: Payments
-        Payment cardPayment = new CardPayment();
-        cardPayment.pay(3_425d);
+//        // Exercise 14: Payments
+//        Payment cardPayment = new CardPayment();
+//        cardPayment.pay(3_425d);
+//
+//        Payment cashPayment = new CashPayment();
+//        cashPayment.pay(2_332d);
 
-        Payment cashPayment = new CashPayment();
-        cashPayment.pay(2_332d);
+        // Exercise 15: Cars Maintenance
+        Fleet fleet = new Fleet();
+        fleet.addVehicle(new Vehicle("Toyota", "Corolla", 15000));
+        fleet.addVehicle(new Vehicle("Ford", "Focus", 25000));
+        fleet.addVehicle(new Vehicle("Honda", "Civic", 5000));
+
+        int mileageLimit = 10000;
+        fleet.registerMaintenance(mileageLimit);
 
 //        // Exercise 16: Inventory Management
 //        Inventory inventory = new Inventory();
