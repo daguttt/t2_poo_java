@@ -13,9 +13,11 @@
 
 //import exercise15_vehicles_maintenance.Fleet;
 //import exercise3_vehicle.Vehicle;
+import exercise10_employee.Employee;
 import exercise17_sales_registry.Customer;
 import exercise17_sales_registry.Product;
 import exercise17_sales_registry.Store;
+import exercise18_time_tracking.HoursControl;
 
 import java.util.List;
 
@@ -191,21 +193,27 @@ public class Main {
 //        boolean isProductRemoved = inventory.deleteProduct("Book");
 //        System.out.println("Book was " + (isProductRemoved ? "successfully removed" : "not found"));
 
-        // Exercise 17: Sales Registry
-        Store store = new Store();
+//        // Exercise 17: Sales Registry
+//        Store store = new Store();
+//
+//        // Adding products to store inventory
+//        Product p1 = new Product("Laptop", 999.99, 5);
+//        Product p2 = new Product("Phone", 499.99, 10);
+//        Product p3 = new Product("Tablet", 299.99, 8);
+//
+//        store.addProductToInventory(p1);
+//        store.addProductToInventory(p2);
+//        store.addProductToInventory(p3);
+//
+//        Customer customer = new Customer("Alice", "alice@example.com");
+//        List<Product> orderProducts = List.of(p1, p2);
+//
+//        store.processOrder(customer, orderProducts);
 
-        // Adding products to store inventory
-        Product p1 = new Product("Laptop", 999.99, 5);
-        Product p2 = new Product("Phone", 499.99, 10);
-        Product p3 = new Product("Tablet", 299.99, 8);
-
-        store.addProductToInventory(p1);
-        store.addProductToInventory(p2);
-        store.addProductToInventory(p3);
-
-        Customer customer = new Customer("Alice", "alice@example.com");
-        List<Product> orderProducts = List.of(p1, p2);
-
-        store.processOrder(customer, orderProducts);
+        // Exercise 18
+        Employee employee = new Employee("John Doe", 50_000.0, 3);
+        employee.recordHours(45);
+        double weeklySalary = HoursControl.calculateWeeklySalary(employee);
+        System.out.printf("Weekly salary for %s: $%,.2f%n", employee.getName(), weeklySalary);
     }
 }
