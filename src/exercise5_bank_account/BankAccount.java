@@ -16,15 +16,15 @@ public class BankAccount {
     }
 
     private List<Transaction> transactions = new ArrayList<>();
-    private int accountNumber;
+    private String accountNumber;
     private String titular;
     private double balance;
 
-    public BankAccount(int accountNumber, String titular) {
+    public BankAccount(String accountNumber, String titular) {
         this(accountNumber, titular, 0.0);
     }
 
-    public BankAccount(int accountNumber, String titular, double balance) {
+    public BankAccount(String accountNumber, String titular, double balance) {
         this.accountNumber = accountNumber;
         this.titular = titular;
         this.balance = balance;

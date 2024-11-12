@@ -13,14 +13,16 @@
 
 //import exercise15_vehicles_maintenance.Fleet;
 //import exercise3_vehicle.Vehicle;
-import exercise10_employee.Employee;
-import exercise17_sales_registry.Customer;
-import exercise17_sales_registry.Product;
-import exercise17_sales_registry.Store;
-import exercise18_time_tracking.HoursControl;
-import exercise19_booking_flights_system.Booking;
-import exercise19_booking_flights_system.Flight;
-import exercise19_booking_flights_system.Passenger;
+//import exercise10_employee.Employee;
+//import exercise17_sales_registry.Customer;
+//import exercise17_sales_registry.Product;
+//import exercise17_sales_registry.Store;
+//import exercise18_time_tracking.HoursControl;
+//import exercise19_booking_flights_system.Booking;
+//import exercise19_booking_flights_system.Flight;
+//import exercise19_booking_flights_system.Passenger;
+import exercise20_bank.Bank;
+import exercise20_bank.BankAccount;
 
 import java.util.List;
 import java.util.Optional;
@@ -57,7 +59,7 @@ public class Main {
         // Person.compareAge(person1, person2);
 
         // // Exercise 5: Clase Cuenta Bancaria
-        // BankAccount bankAccount = new BankAccount(123456, "John Doe");
+        // BankAccount bankAccount = new BankAccount("123456", "John Doe");
         // bankAccount.printBalance();
         // bankAccount.deposit(500.0);
         // bankAccount.withdraw(200.0);
@@ -220,16 +222,44 @@ public class Main {
 //        double weeklySalary = HoursControl.calculateWeeklySalary(employee);
 //        System.out.printf("Weekly salary for %s: $%,.2f%n", employee.getName(), weeklySalary);
 
-        // Exercise 19:  Booking Flight System
-        Flight flight = new Flight("AI202", 5);
+//        // Exercise 19:  Booking Flight System
+//        Flight flight = new Flight("AI202", 5);
+//
+//        Passenger passenger1 = new Passenger("Alice Smith", "A123456");
+//        Passenger passenger2 = new Passenger("Bob Brown", "B789101");
+//
+//        Optional<Booking> booking1 = flight.bookSeat(passenger1);
+//        Optional<Booking> booking2 = flight.bookSeat(passenger2);
+//
+//        booking1.ifPresent(booking -> flight.cancelBooking(booking1.get()));
 
-        Passenger passenger1 = new Passenger("Alice Smith", "A123456");
-        Passenger passenger2 = new Passenger("Bob Brown", "B789101");
+        // Exercise 20: Bank
+        Bank bank = new Bank();
 
-        Optional<Booking> booking1 = flight.bookSeat(passenger1);
-        Optional<Booking> booking2 = flight.bookSeat(passenger2);
+        BankAccount account1 = new BankAccount("12345", 500.0);
+        BankAccount account2 = new BankAccount("67890", 1000.0);
 
-        booking1.ifPresent(booking -> flight.cancelBooking(booking1.get()));
+        account2.printBalance();
+        System.out.println();
 
+        bank.addAccount(account1);
+        bank.addAccount(account2);
+
+        account1.deposit(200.0);
+        bank.transfer("12345", "67890", 150.0);
+        bank.transfer("12345", "67890", 700.0); // Should fail due to insufficient funds
+
+        System.out.println("\nTransaction history for account 12345:");
+        for (String transaction : account1.getTransactionHistory()) {
+            System.out.println(transaction);
+        }
+
+        System.out.println("\nTransaction history for account 67890:");
+        for (String transaction : account2.getTransactionHistory()) {
+            System.out.println(transaction);
+        }
+
+        System.out.println();
+        account2.printBalance();
     }
 }
