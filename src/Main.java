@@ -18,8 +18,12 @@ import exercise17_sales_registry.Customer;
 import exercise17_sales_registry.Product;
 import exercise17_sales_registry.Store;
 import exercise18_time_tracking.HoursControl;
+import exercise19_booking_flights_system.Booking;
+import exercise19_booking_flights_system.Flight;
+import exercise19_booking_flights_system.Passenger;
 
 import java.util.List;
+import java.util.Optional;
 
 public class Main {
     public static void main(String[] args) {
@@ -210,10 +214,22 @@ public class Main {
 //
 //        store.processOrder(customer, orderProducts);
 
-        // Exercise 18
-        Employee employee = new Employee("John Doe", 50_000.0, 3);
-        employee.recordHours(45);
-        double weeklySalary = HoursControl.calculateWeeklySalary(employee);
-        System.out.printf("Weekly salary for %s: $%,.2f%n", employee.getName(), weeklySalary);
+//        // Exercise 18
+//        Employee employee = new Employee("John Doe", 50_000.0, 3);
+//        employee.recordHours(45);
+//        double weeklySalary = HoursControl.calculateWeeklySalary(employee);
+//        System.out.printf("Weekly salary for %s: $%,.2f%n", employee.getName(), weeklySalary);
+
+        // Exercise 19:  Booking Flight System
+        Flight flight = new Flight("AI202", 5);
+
+        Passenger passenger1 = new Passenger("Alice Smith", "A123456");
+        Passenger passenger2 = new Passenger("Bob Brown", "B789101");
+
+        Optional<Booking> booking1 = flight.bookSeat(passenger1);
+        Optional<Booking> booking2 = flight.bookSeat(passenger2);
+
+        booking1.ifPresent(booking -> flight.cancelBooking(booking1.get()));
+
     }
 }
